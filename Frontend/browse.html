@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Videos — StreamSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="ss-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/tez-logo.png" alt="StreamSphere Logo" width="40" height="40" class="me-2">
+        <span>Stream<span class="brand-highlight">Sphere</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="browse.html">Browse</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="login.html">Sign In</a></li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link btn-nav-upload" href="upload.html"><i class="fas fa-cloud-upload-alt me-1"></i> Upload</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="ss-page-header">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-5">
+          <h1>Browse Videos</h1>
+          <p>Discover content from creators around the world</p>
+        </div>
+        <div class="col-md-7">
+          <div class="ss-search-wrap ms-md-auto">
+            <i class="fas fa-search"></i>
+            <input type="text" id="browse-search" placeholder="Search videos, creators, topics…" />
+            <button class="ss-search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Filters ── -->
+  <div style="background:var(--clr-white);border-bottom:1px solid var(--clr-gray);padding:1rem 0;position:sticky;top:68px;z-index:900;">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <div class="d-flex gap-2 flex-wrap flex-grow-1">
+          <span class="ss-pill active">All</span>
+          <span class="ss-pill">Short Film</span>
+          <span class="ss-pill">Documentary</span>
+          <span class="ss-pill">Motion Design</span>
+          <span class="ss-pill">Music Video</span>
+          <span class="ss-pill">Nature</span>
+          <span class="ss-pill">Animation</span>
+          <span class="ss-pill">Travel</span>
+        </div>
+        <div class="d-flex gap-2 ms-auto flex-shrink-0">
+          <select class="ss-select">
+            <option>Most Recent</option>
+            <option>Most Viewed</option>
+            <option>Top Rated</option>
+            <option>Oldest</option>
+          </select>
+          <select class="ss-select">
+            <option>All Duration</option>
+            <option>Under 5 min</option>
+            <option>5–20 min</option>
+            <option>20+ min</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Video Grid ── -->
+  <section class="py-5">
+    <div class="container">
+      <p class="ss-section-sub mb-4" id="result-count">Showing <strong>12</strong> videos</p>
+      <div class="row g-4 ss-video-grid" id="video-grid">
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b1.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">8:34</span>
+              <span class="ss-video-quality">4K</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Urban Echoes — A City Documentary</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">AJ</div><span class="ss-card-author-name">Alex Johnson</span></div>
+              <div class="ss-card-meta mt-1"><span>142K views</span><span class="dot">3 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b2.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">4:21</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Neon Lights — Motion Design Reel</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">SK</div><span class="ss-card-author-name">Sofia Klein</span></div>
+              <div class="ss-card-meta mt-1"><span>89K views</span><span class="dot">1 week ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b3.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">22:10</span>
+              <span class="ss-video-quality">HDR</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Into the Wild — Nature Photography Showcase</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">MR</div><span class="ss-card-author-name">Marco Reeves</span></div>
+              <div class="ss-card-meta mt-1"><span>310K views</span><span class="dot">2 weeks ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b3.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">15:48</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Silent Hours — Award Winning Short Film</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">NP</div><span class="ss-card-author-name">Nina Park</span></div>
+              <div class="ss-card-meta mt-1"><span>224K views</span><span class="dot">1 month ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b5.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">6:05</span>
+              <span class="ss-video-quality">4K</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Chromatic — Abstract Color Study</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">LT</div><span class="ss-card-author-name">Leo Torres</span></div>
+              <div class="ss-card-meta mt-1"><span>58K views</span><span class="dot">5 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b6.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">3:58</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Drift — Original Music Video</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">EW</div><span class="ss-card-author-name">Ella Wu</span></div>
+              <div class="ss-card-meta mt-1"><span>178K views</span><span class="dot">2 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b7.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">11:30</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Concrete Dreams — Architecture Film</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">JM</div><span class="ss-card-author-name">James Mori</span></div>
+              <div class="ss-card-meta mt-1"><span>95K views</span><span class="dot">4 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b8.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">7:12</span>
+              <span class="ss-video-quality">4K</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Pulse — Electronic Music Visualizer</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">RA</div><span class="ss-card-author-name">Rina Adler</span></div>
+              <div class="ss-card-meta mt-1"><span>44K views</span><span class="dot">6 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b9.jpg  " alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">19:42</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>The Last Light — Climate Documentary</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">CS</div><span class="ss-card-author-name">Clara Stone</span></div>
+              <div class="ss-card-meta mt-1"><span>412K views</span><span class="dot">3 weeks ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b10.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">2:55</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Bloom — Macro Flower Animation</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">PK</div><span class="ss-card-author-name">Park Kai</span></div>
+              <div class="ss-card-meta mt-1"><span>67K views</span><span class="dot">2 weeks ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b11.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">14:02</span>
+              <span class="ss-video-quality">HDR</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Crossroads — A Travel Diary</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">BL</div><span class="ss-card-author-name">Bea Lim</span></div>
+              <div class="ss-card-meta mt-1"><span>133K views</span><span class="dot">1 week ago</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="ss-video-card">
+            <div class="ss-video-thumb">
+              <img src="assets/images/b12.jpg" alt="" />
+              <div class="ss-play-overlay"><div class="ss-play-btn"><i class="fas fa-play"></i></div></div>
+              <span class="ss-video-duration">5:18</span>
+            </div>
+            <div class="ss-video-card-body">
+              <h5>Phantom — Experimental Short</h5>
+              <div class="ss-card-author"><div class="ss-avatar-sm">DV</div><span class="ss-card-author-name">D. Vargas</span></div>
+              <div class="ss-card-meta mt-1"><span>29K views</span><span class="dot">8 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Load more -->
+      <div class="text-center mt-5">
+        <button class="btn-dark-ss" id="load-more-btn"><i class="fas fa-sync-alt me-1"></i> Load More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="ss-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="ss-footer-brand mb-2">Stream<span>Sphere</span></div>
+          <p style="font-size:.88rem;max-width:280px;">The premium video platform for creators who care about quality, privacy, and community.</p>
+        </div>
+        <div class="col-6 col-md-2"><h5>Platform</h5><a href="browse.html">Browse</a><a href="upload.html">Upload</a><a href="dashboard.html">Dashboard</a></div>
+        <div class="col-6 col-md-2"><h5>Account</h5><a href="login.html">Sign In</a><a href="register.html">Register</a></div>
+        <div class="col-6 col-md-2"><h5>Support</h5><a href="#">Help Center</a><a href="#">Community</a></div>
+        <div class="col-6 col-md-2"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+      <hr class="ss-footer-divider" />
+      <p class="ss-footer-copy text-center">© 2025 StreamSphere. All rights reserved by TezTecch.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Load more button (UI demo)
+    document.getElementById('load-more-btn').addEventListener('click', function() {
+      this.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Loading…';
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-sync-alt me-1"></i> Load More';
+        ssToast('All videos loaded!', 'fa-check-circle');
+      }, 1200);
+    });
+
+    // Search filter
+    document.getElementById('browse-search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('.ss-video-card').forEach(card => {
+        const title = card.querySelector('h5').textContent.toLowerCase();
+        card.closest('.col').style.display = title.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

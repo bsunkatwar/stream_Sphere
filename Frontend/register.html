@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — StreamSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="ss-navbar navbar navbar-expand-lg">
+    <div class="container">
+     <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/tez-logo.png" alt="StreamSphere Logo" width="40" height="40" class="me-2">
+        <span>Stream<span class="brand-highlight">Sphere</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="login.html">Sign In</a></li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link btn-nav-upload" href="upload.html"><i class="fas fa-cloud-upload-alt me-1"></i> Upload</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Auth Wrap ── -->
+  <div class="ss-auth-wrap">
+    <div class="container">
+      <div class="ss-auth-card" style="max-width:520px;">
+
+        <div class="text-center mb-3">
+          <div style="width:52px;height:52px;border-radius:14px;background:var(--clr-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+            <i class="fas fa-user-plus" style="color:var(--clr-accent);font-size:1rem;"></i>
+          </div>
+          <h2>Create your account</h2>
+          <p class="ss-auth-sub">Join StreamSphere and start sharing your stories</p>
+        </div>
+
+        <!-- Social buttons -->
+        <div class="d-flex gap-2 mb-3">
+          <button type="button" style="flex:1;padding:.6rem;border:1.5px solid var(--clr-gray);border-radius:var(--radius-sm);background:#fff;cursor:pointer;font-family:var(--font-head);font-size:.85rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:.5rem;" onmouseover="this.style.borderColor='var(--clr-dark)'" onmouseout="this.style.borderColor='var(--clr-gray)'">
+            <i class="fab fa-google" style="color:#4285F4;"></i> Google
+          </button>
+          <button type="button" style="flex:1;padding:.6rem;border:1.5px solid var(--clr-gray);border-radius:var(--radius-sm);background:#fff;cursor:pointer;font-family:var(--font-head);font-size:.85rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:.5rem;" onmouseover="this.style.borderColor='var(--clr-dark)'" onmouseout="this.style.borderColor='var(--clr-gray)'">
+            <i class="fab fa-apple" style="color:#000;"></i> Apple
+          </button>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <hr style="flex:1;border-color:var(--clr-gray);" />
+          <span style="color:var(--clr-muted);font-size:.8rem;white-space:nowrap;">or register with email</span>
+          <hr style="flex:1;border-color:var(--clr-gray);" />
+        </div>
+
+        <form id="register-form" novalidate>
+          <div class="mb-3">
+            <label class="ss-form-label" for="reg-name">Full Name</label>
+            <div class="ss-input-icon-wrap">
+              <i class="fas fa-user ss-input-icon"></i>
+              <input type="text" id="reg-name" class="ss-form-control" placeholder="Your full name" />
+            </div>
+            <span class="ss-invalid-feedback">Full name is required.</span>
+          </div>
+
+          <div class="mb-3">
+            <label class="ss-form-label" for="reg-email">Email Address</label>
+            <div class="ss-input-icon-wrap">
+              <i class="fas fa-envelope ss-input-icon"></i>
+              <input type="email" id="reg-email" class="ss-form-control" placeholder="you@example.com" />
+            </div>
+            <span class="ss-invalid-feedback">Enter a valid email address.</span>
+          </div>
+
+          <div class="row g-2 mb-3">
+            <div class="col-12 col-sm-6">
+              <label class="ss-form-label" for="reg-password">Password</label>
+              <div style="position:relative;">
+                <input type="password" id="reg-password" class="ss-form-control" placeholder="Min. 8 characters" style="padding-right:3rem;" />
+                <button type="button" class="ss-pwd-toggle" data-target="reg-password" style="position:absolute;right:.9rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--clr-muted);cursor:pointer;padding:0;">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span class="ss-invalid-feedback">At least 8 characters required.</span>
+            </div>
+            <div class="col-12 col-sm-6">
+              <label class="ss-form-label" for="reg-confirm">Confirm Password</label>
+              <div style="position:relative;">
+                <input type="password" id="reg-confirm" class="ss-form-control" placeholder="Repeat password" style="padding-right:3rem;" />
+                <button type="button" class="ss-pwd-toggle" data-target="reg-confirm" style="position:absolute;right:.9rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--clr-muted);cursor:pointer;padding:0;">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span class="ss-invalid-feedback">Passwords do not match.</span>
+            </div>
+          </div>
+
+          <!-- Password strength indicator -->
+          <div class="mb-3" id="pwd-strength-wrap" style="display:none;">
+            <div style="display:flex;gap:4px;margin-bottom:.35rem;">
+              <div class="ss-strength-bar" style="flex:1;height:4px;border-radius:99px;background:var(--clr-gray);transition:background .3s;"></div>
+              <div class="ss-strength-bar" style="flex:1;height:4px;border-radius:99px;background:var(--clr-gray);transition:background .3s;"></div>
+              <div class="ss-strength-bar" style="flex:1;height:4px;border-radius:99px;background:var(--clr-gray);transition:background .3s;"></div>
+              <div class="ss-strength-bar" style="flex:1;height:4px;border-radius:99px;background:var(--clr-gray);transition:background .3s;"></div>
+            </div>
+            <span id="pwd-strength-label" style="font-size:.78rem;color:var(--clr-muted);"></span>
+          </div>
+
+          <div class="mb-4 d-flex align-items-start gap-2">
+            <input type="checkbox" id="reg-terms" style="width:16px;height:16px;margin-top:2px;accent-color:var(--clr-dark);cursor:pointer;" required />
+            <label for="reg-terms" style="font-size:.85rem;color:var(--clr-muted);cursor:pointer;line-height:1.5;">
+              I agree to StreamSphere's <a href="#" style="color:var(--clr-dark);font-weight:600;">Terms of Service</a> and <a href="#" style="color:var(--clr-dark);font-weight:600;">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-primary-ss w-100" style="justify-content:center;font-size:1rem;">
+            <i class="fas fa-user-plus me-1"></i> Create Account
+          </button>
+        </form>
+
+        <p style="text-align:center;font-size:.88rem;margin-top:1.5rem;color:var(--clr-muted);">
+          Already have an account? <a href="login.html" style="color:var(--clr-dark);font-weight:700;">Sign in</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    // Password strength meter
+    const pwdInput = document.getElementById('reg-password');
+    const strengthWrap = document.getElementById('pwd-strength-wrap');
+    const strengthBars = document.querySelectorAll('.ss-strength-bar');
+    const strengthLabel = document.getElementById('pwd-strength-label');
+
+    pwdInput.addEventListener('input', function() {
+      const val = this.value;
+      if (!val) { strengthWrap.style.display = 'none'; return; }
+      strengthWrap.style.display = 'block';
+
+      let score = 0;
+      if (val.length >= 8) score++;
+      if (/[A-Z]/.test(val)) score++;
+      if (/[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
+
+      const colors = ['#e74c3c','#e67e22','#f1c40f','#27ae60'];
+      const labels = ['Weak','Fair','Good','Strong'];
+
+      strengthBars.forEach((bar, i) => {
+        bar.style.background = i < score ? colors[score - 1] : 'var(--clr-gray)';
+      });
+      strengthLabel.textContent = 'Password strength: ' + labels[score - 1];
+      strengthLabel.style.color = colors[score - 1];
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — StreamSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/components.css"/>
+  <link rel="stylesheet" href="assets/css/responsive.css"/>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="ss-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/tez-logo.png" alt="StreamSphere Logo" width="40" height="40" class="me-2">
+        <span>Stream<span class="brand-highlight">Sphere</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link active" href="login.html">Sign In</a></li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link btn-nav-upload" href="upload.html"><i class="fas fa-cloud-upload-alt me-1"></i> Upload</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Auth Wrap ── -->
+  <div class="ss-auth-wrap">
+    <div class="container">
+      <div class="ss-auth-card">
+
+        <!-- Brand mark -->
+        <div class="text-center mb-3">
+          <div style="width:52px;height:52px;border-radius:14px;background:var(--clr-dark);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+            <i class="fas fa-play" style="color:var(--clr-accent);font-size:1.1rem;margin-left:2px;"></i>
+          </div>
+          <h2>Welcome back</h2>
+          <p class="ss-auth-sub">Sign in to your StreamSphere account</p>
+        </div>
+
+        <!-- Social buttons -->
+        <div class="d-flex gap-2 mb-3">
+          <button type="button" style="flex:1;padding:.6rem;border:1.5px solid var(--clr-gray);border-radius:var(--radius-sm);background:#fff;cursor:pointer;font-family:var(--font-head);font-size:.85rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all var(--transition);" onmouseover="this.style.borderColor='var(--clr-dark)'" onmouseout="this.style.borderColor='var(--clr-gray)'">
+            <i class="fab fa-google" style="color:#4285F4;"></i> Google
+          </button>
+          <button type="button" style="flex:1;padding:.6rem;border:1.5px solid var(--clr-gray);border-radius:var(--radius-sm);background:#fff;cursor:pointer;font-family:var(--font-head);font-size:.85rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all var(--transition);" onmouseover="this.style.borderColor='var(--clr-dark)'" onmouseout="this.style.borderColor='var(--clr-gray)'">
+            <i class="fab fa-apple" style="color:#000;"></i> Apple
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <hr style="flex:1;border-color:var(--clr-gray);" />
+          <span style="color:var(--clr-muted);font-size:.8rem;white-space:nowrap;">or continue with email</span>
+          <hr style="flex:1;border-color:var(--clr-gray);" />
+        </div>
+
+        <!-- Form -->
+        <form id="login-form" novalidate>
+          <div class="mb-3">
+            <label class="ss-form-label" for="login-email">Email Address</label>
+            <div class="ss-input-icon-wrap">
+              <i class="fas fa-envelope ss-input-icon"></i>
+              <input type="email" id="login-email" class="ss-form-control" placeholder="you@example.com" />
+            </div>
+            <span class="ss-invalid-feedback">Enter a valid email address.</span>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <label class="ss-form-label mb-0" for="login-password">Password</label>
+              <a href="#" style="font-size:.8rem;color:var(--clr-dark);font-weight:600;">Forgot password?</a>
+            </div>
+            <div class="ss-input-icon-wrap" style="position:relative;">
+              <i class="fas fa-lock ss-input-icon"></i>
+              <input type="password" id="login-password" class="ss-form-control" placeholder="Your password" style="padding-right:3rem;" />
+              <button type="button" class="ss-pwd-toggle" data-target="login-password" style="position:absolute;right:.9rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--clr-muted);cursor:pointer;padding:0;line-height:1;">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <span class="ss-invalid-feedback">Password is required.</span>
+          </div>
+
+          <div class="mb-4 d-flex align-items-center gap-2">
+            <input type="checkbox" id="remember-me" style="width:16px;height:16px;accent-color:var(--clr-dark);cursor:pointer;" />
+            <label for="remember-me" style="font-size:.88rem;color:var(--clr-muted);cursor:pointer;">Remember me for 30 days</label>
+          </div>
+
+          <button type="submit" class="btn-primary-ss w-100" style="justify-content:center;font-size:1rem;">
+            <i class="fas fa-sign-in-alt me-1"></i> Sign In
+          </button>
+        </form>
+
+        <p style="text-align:center;font-size:.88rem;margin-top:1.5rem;color:var(--clr-muted);">
+          Don't have an account? <a href="register.html" style="color:var(--clr-dark);font-weight:700;">Create one free</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Echoes — StreamSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="ss-navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/tez-logo.png" alt="StreamSphere Logo" width="40" height="40" class="me-2">
+        <span>Stream<span class="brand-highlight">Sphere</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="login.html">Sign In</a></li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link btn-nav-upload" href="upload.html"><i class="fas fa-cloud-upload-alt me-1"></i> Upload</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-4" style="background:var(--clr-light);">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- ── Main Player Column ── -->
+        <div class="col-lg-8">
+
+          <!-- Player -->
+          <div class="ss-watch-player-wrap">
+            <video controls poster="https://picsum.photos/seed/vid1/1280/720">
+              <source src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Meta -->
+          <div class="ss-watch-meta">
+            <div class="d-flex align-items-start justify-content-between gap-2 flex-wrap">
+              <h1>Urban Echoes — A City Documentary</h1>
+              <span class="ss-badge align-self-start mt-2">4K</span>
+            </div>
+
+            <!-- Stats -->
+            <div class="d-flex align-items-center gap-3 flex-wrap mt-2 mb-2">
+              <span style="color:var(--clr-muted);font-size:.88rem;"><i class="fas fa-eye me-1"></i> 142,387 views</span>
+              <span style="color:var(--clr-muted);font-size:.88rem;"><i class="fas fa-calendar me-1"></i> April 12, 2025</span>
+              <span style="color:var(--clr-muted);font-size:.88rem;"><i class="fas fa-clock me-1"></i> 8:34</span>
+            </div>
+
+            <!-- Action bar -->
+            <div class="ss-action-bar">
+              <button class="ss-action-btn" data-action="like">
+                <i class="far fa-heart"></i>
+                <span>8,412</span>
+              </button>
+              <button class="ss-action-btn" data-action="share">
+                <i class="fas fa-share-alt"></i>
+                <span>Share</span>
+              </button>
+              <button class="ss-action-btn" data-action="save">
+                <i class="far fa-bookmark"></i>
+                <span>Save</span>
+              </button>
+              <button class="ss-action-btn ms-auto">
+                <i class="fas fa-flag"></i>
+                <span>Report</span>
+              </button>
+            </div>
+
+            <!-- Author -->
+            <div class="ss-watch-author">
+              <div class="ss-avatar">AJ</div>
+              <div>
+                <p style="font-family:var(--font-head);font-weight:700;margin:0;font-size:.95rem;">Alex Johnson</p>
+                <span style="color:var(--clr-muted);font-size:.82rem;">48.3K followers</span>
+              </div>
+              <button class="btn-dark-ss ms-auto" style="font-size:.82rem;padding:.45rem 1.1rem;">
+                <i class="fas fa-user-plus me-1"></i> Follow
+              </button>
+            </div>
+
+            <!-- Description -->
+            <div style="background:var(--clr-light);border-radius:var(--radius-md);padding:1.2rem 1.4rem;margin-top:.5rem;">
+              <p style="font-size:.9rem;color:var(--clr-text);margin:0;line-height:1.75;">
+                A cinematic journey through the streets, sounds, and souls of urban life. Filmed over six months across four cities, this documentary explores the rhythm of the city — from dawn markets to midnight trains. Shot entirely in 4K on location.<br><br>
+                <strong style="font-family:var(--font-head);">Categories:</strong> Documentary · Urban · Cinematography
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Sidebar ── -->
+        <div class="col-lg-4">
+          <div class="ss-sidebar-title">Up Next</div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s1/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Neon Lights — Motion Design Reel</h6>
+              <span>Sofia Klein · 89K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s2/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Into the Wild — Nature Photography</h6>
+              <span>Marco Reeves · 310K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s3/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Silent Hours — Award Winning Short Film</h6>
+              <span>Nina Park · 224K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s4/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Chromatic — Abstract Color Study</h6>
+              <span>Leo Torres · 58K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s5/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Drift — Original Music Video</h6>
+              <span>Ella Wu · 178K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s6/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>Concrete Dreams — Architecture Film</h6>
+              <span>James Mori · 95K views</span>
+            </div>
+          </div>
+
+          <div class="ss-suggest-item">
+            <div class="ss-suggest-thumb">
+              <img src="https://picsum.photos/seed/s7/320/180" alt="" />
+            </div>
+            <div class="ss-suggest-info">
+              <h6>The Last Light — Climate Documentary</h6>
+              <span>Clara Stone · 412K views</span>
+            </div>
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="browse.html" class="btn-dark-ss w-100" style="justify-content:center;"><i class="fas fa-th-large me-1"></i> Browse All</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="ss-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="ss-footer-brand mb-2">Stream<span>Sphere</span></div>
+          <p style="font-size:.88rem;max-width:280px;">The premium video platform for creators who care about quality, privacy, and community.</p>
+        </div>
+        <div class="col-6 col-md-2"><h5>Platform</h5><a href="browse.html">Browse</a><a href="upload.html">Upload</a><a href="dashboard.html">Dashboard</a></div>
+        <div class="col-6 col-md-2"><h5>Account</h5><a href="login.html">Sign In</a><a href="register.html">Register</a></div>
+        <div class="col-6 col-md-2"><h5>Support</h5><a href="#">Help Center</a><a href="#">Community</a></div>
+        <div class="col-6 col-md-2"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+      <hr class="ss-footer-divider" />
+      <p class="ss-footer-copy text-center">© 2025 StreamSphere. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Save button toggle
+    document.querySelector('[data-action="save"]').addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('far')) {
+        icon.classList.replace('far','fas');
+        this.querySelector('span').textContent = 'Saved';
+        ssToast('Added to your saved videos!', 'fa-bookmark');
+      } else {
+        icon.classList.replace('fas','far');
+        this.querySelector('span').textContent = 'Save';
+      }
+    });
+  </script>
+</body>
+</html>

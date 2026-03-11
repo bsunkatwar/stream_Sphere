@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback – StreamSphere</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg ss-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/tez-logo.png" alt="StreamSphere Logo" width="40" height="40" class="me-2">
+        <span>Stream<span class="brand-highlight">Sphere</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="community.html">Community</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="help-center.html">Help</a></li>
+          <li class="nav-item ms-2"><a class="btn btn-primary-ss px-4 active" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="ss-page-header text-center py-5">
+    <div class="container">
+      <span class="ss-badge mb-3 d-inline-block">Your Voice Matters</span>
+      <h1 class="display-4 fw-bold mb-2">Share Your Feedback</h1>
+      <p class="lead opacity-75 mb-0">Help us build the streaming platform you deserve. Every response is read by our team.</p>
+    </div>
+  </header>
+
+  <!-- ===== TWO-COLUMN FORM SECTION ===== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+
+        <!-- LEFT: Illustration + trust signals -->
+        <div class="col-lg-5">
+          <div class="rounded-4 overflow-hidden shadow-sm mb-4">
+            <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=800&q=80"
+              alt="Team reviewing feedback" class="img-fluid w-100" style="max-height:320px; object-fit:cover;" />
+          </div>
+
+          <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+            <h5 class="fw-bold mb-3">Why your feedback matters</h5>
+            <div class="d-flex gap-3 mb-3">
+              <div class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-warning p-2 flex-shrink-0">
+                <i class="bi bi-eye fs-5"></i>
+              </div>
+              <div>
+                <div class="fw-semibold small">Read by our team</div>
+                <div class="small text-muted">Every submission goes directly to our product team, not a void.</div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3">
+              <div class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-warning p-2 flex-shrink-0">
+                <i class="bi bi-lightning fs-5"></i>
+              </div>
+              <div>
+                <div class="fw-semibold small">Fast response</div>
+                <div class="small text-muted">Support tickets receive a reply within 4 business hours.</div>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-warning p-2 flex-shrink-0">
+                <i class="bi bi-bar-chart-steps fs-5"></i>
+              </div>
+              <div>
+                <div class="fw-semibold small">Drives our roadmap</div>
+                <div class="small text-muted">The top-voted ideas from feedback directly shape our quarterly releases.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 rounded-4 bg-dark text-white p-4">
+            <div class="d-flex gap-1 mb-2">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="small mb-3 opacity-75">"StreamSphere's support team is refreshingly responsive. I submitted feedback and saw the feature in the next release. Incredible."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&q=80"
+                alt="Reviewer" class="rounded-circle" width="40" height="40" style="object-fit:cover;" />
+              <div>
+                <div class="fw-semibold small">Alex Mercer</div>
+                <div class="small opacity-50">Creator · 210K subscribers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Feedback form -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5">
+
+            <form novalidate id="feedbackForm">
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <label for="fbName" class="form-label fw-semibold small">Full Name</label>
+                  <input type="text" id="fbName" class="form-control ss-form-control rounded-3" placeholder="Jane Doe" required />
+                </div>
+                <div class="col-sm-6">
+                  <label for="fbEmail" class="form-label fw-semibold small">Email Address</label>
+                  <input type="email" id="fbEmail" class="form-control ss-form-control rounded-3" placeholder="jane@example.com" required />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="fbCategory" class="form-label fw-semibold small">Category</label>
+                <select id="fbCategory" class="form-select ss-form-control rounded-3" required>
+                  <option value="" disabled selected>Select a category…</option>
+                  <option>General Feedback</option>
+                  <option>Bug Report</option>
+                  <option>Feature Request</option>
+                  <option>Content Concern</option>
+                  <option>Account Issue</option>
+                  <option>Billing Enquiry</option>
+                </select>
+              </div>
+
+              <!-- Star Rating -->
+              <div class="mb-4">
+                <span class="form-label fw-semibold small d-block mb-2">Overall Experience</span>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <div class="d-flex gap-1" id="starRating" role="group" aria-label="Star rating">
+                    <button type="button" class="btn p-1 border-0 bg-transparent ss-star" data-val="1" aria-label="1 star">
+                      <i class="bi bi-star fs-2 text-muted"></i>
+                    </button>
+                    <button type="button" class="btn p-1 border-0 bg-transparent ss-star" data-val="2" aria-label="2 stars">
+                      <i class="bi bi-star fs-2 text-muted"></i>
+                    </button>
+                    <button type="button" class="btn p-1 border-0 bg-transparent ss-star" data-val="3" aria-label="3 stars">
+                      <i class="bi bi-star fs-2 text-muted"></i>
+                    </button>
+                    <button type="button" class="btn p-1 border-0 bg-transparent ss-star" data-val="4" aria-label="4 stars">
+                      <i class="bi bi-star fs-2 text-muted"></i>
+                    </button>
+                    <button type="button" class="btn p-1 border-0 bg-transparent ss-star" data-val="5" aria-label="5 stars">
+                      <i class="bi bi-star fs-2 text-muted"></i>
+                    </button>
+                  </div>
+                  <span id="ratingText" class="small text-muted fst-italic">Tap to rate</span>
+                </div>
+                <input type="hidden" id="ratingValue" name="rating" />
+              </div>
+
+              <!-- Specific area sliders -->
+              <div class="mb-4">
+                <span class="form-label fw-semibold small d-block mb-3">Rate Specific Areas <span class="text-muted fw-normal">(1 = Poor, 5 = Excellent)</span></span>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="rVideo" class="form-label small d-flex justify-content-between">
+                      <span>Video Quality</span><span id="rVideoVal" class="fw-semibold">3</span>
+                    </label>
+                    <input type="range" class="form-range" id="rVideo" min="1" max="5" value="3"
+                      oninput="document.getElementById('rVideoVal').textContent=this.value" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="rUpload" class="form-label small d-flex justify-content-between">
+                      <span>Upload Experience</span><span id="rUploadVal" class="fw-semibold">3</span>
+                    </label>
+                    <input type="range" class="form-range" id="rUpload" min="1" max="5" value="3"
+                      oninput="document.getElementById('rUploadVal').textContent=this.value" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="rDiscover" class="form-label small d-flex justify-content-between">
+                      <span>Content Discovery</span><span id="rDiscoverVal" class="fw-semibold">3</span>
+                    </label>
+                    <input type="range" class="form-range" id="rDiscover" min="1" max="5" value="3"
+                      oninput="document.getElementById('rDiscoverVal').textContent=this.value" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="rSupport" class="form-label small d-flex justify-content-between">
+                      <span>Customer Support</span><span id="rSupportVal" class="fw-semibold">3</span>
+                    </label>
+                    <input type="range" class="form-range" id="rSupport" min="1" max="5" value="3"
+                      oninput="document.getElementById('rSupportVal').textContent=this.value" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="fbMessage" class="form-label fw-semibold small">Your Feedback</label>
+                <textarea id="fbMessage" class="form-control ss-form-control rounded-3" rows="5"
+                  placeholder="Tell us what you think, what can be improved, or describe an issue in detail…" required></textarea>
+              </div>
+
+              <div class="mb-4">
+                <label for="fbAttachment" class="form-label fw-semibold small">Attachment <span class="text-muted fw-normal">(optional)</span></label>
+                <input type="file" id="fbAttachment" class="form-control ss-form-control rounded-3" accept="image/*,.pdf" />
+                <div class="form-text">Screenshots or files up to 5 MB. PNG, JPG, PDF accepted.</div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="fbConsent" required />
+                <label class="form-check-label small" for="fbConsent">
+                  I agree to StreamSphere's <a href="privacy-policy.html">Privacy Policy</a> and consent to my feedback being used to improve the platform.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary-ss w-100 py-3 fw-semibold">
+                <i class="bi bi-send me-2"></i>Submit Feedback
+              </button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="ss-section-label d-block mb-2">What Creators Say</span>
+        <h2 class="fw-bold fs-1">Feedback That Shaped StreamSphere</h2>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="d-flex gap-1 mb-3">
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+            </div>
+            <p class="text-muted small mb-4">"I flagged a playback bug in the feedback form on a Monday. By Wednesday it was fixed in the app. I've never seen that kind of turnaround from a platform."</p>
+            <div class="ss-divider mb-3"></div>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=80&q=80"
+                alt="Sofia K." class="rounded-circle flex-shrink-0" width="44" height="44" style="object-fit:cover;" />
+              <div>
+                <div class="fw-semibold small">Sofia K.</div>
+                <div class="small text-muted">Documentary Creator</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="d-flex gap-1 mb-3">
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-half text-warning small"></i>
+            </div>
+            <p class="text-muted small mb-4">"The analytics dashboard I suggested made it into the product six months later. It feels like the StreamSphere team actually listens — because they do."</p>
+            <div class="ss-divider mb-3"></div>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80"
+                alt="Marco T." class="rounded-circle flex-shrink-0" width="44" height="44" style="object-fit:cover;" />
+              <div>
+                <div class="fw-semibold small">Marco T.</div>
+                <div class="small text-muted">Tech Educator · 85K subs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="d-flex gap-1 mb-3">
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+              <i class="bi bi-star-fill text-warning small"></i>
+            </div>
+            <p class="text-muted small mb-4">"Submitted a feature request for auto-chapters and it shipped two months later. This is what a creator-first platform looks like. I'm not going anywhere."</p>
+            <div class="ss-divider mb-3"></div>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&q=80"
+                alt="Priya N." class="rounded-circle flex-shrink-0" width="44" height="44" style="object-fit:cover;" />
+              <div>
+                <div class="fw-semibold small">Priya N.</div>
+                <div class="small text-muted">Travel Vlogger · 340K subs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="ss-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="ss-footer-brand mb-2">Stream<span>Sphere</span></div>
+          <p style="font-size:.88rem;max-width:280px;">The premium video platform for creators who care about quality, privacy, and community.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Platform</h5>
+          <a href="browse.html">Browse</a>
+          <a href="upload.html">Upload</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="watch.html">Watch</a>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Account</h5>
+          <a href="login.html">Sign In</a>
+          <a href="register.html">Register</a>
+          <a href="dashboard.html">Profile</a>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Support</h5>
+          <a href="help.html">Help Center</a>
+          <a href="community.html">Community</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Legal</h5>
+          <a href="privacypolicy.html">Privacy</a>
+          <a href="term.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+      <hr class="ss-footer-divider" />
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="ss-footer-copy mb-0">© 2025 StreamSphere. All rights reserved by TezTecch.</p>
+        <div class="d-flex gap-3">
+          <a href="https://x.com/tecchtez" style="color:rgba(255,255,255,.5);font-size:1rem;" class="hover-accent"><i class="fab fa-twitter"></i></a>
+          <a href="https://t.me/teztecch" style="color:rgba(255,255,255,.5);font-size:1rem;"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@teztecch" style="color:rgba(255,255,255,.5);font-size:1rem;"><i class="fab fa-youtube"></i></a>
+          <a href="https://in.linkedin.com/company/teztecchsolutions" style="color:rgba(255,255,255,.5);font-size:1rem;"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const stars = document.querySelectorAll('.ss-star');
+    const ratingInput = document.getElementById('ratingValue');
+    const ratingText = document.getElementById('ratingText');
+    const labels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+
+    function paintStars(count) {
+      stars.forEach((btn, i) => {
+        const icon = btn.querySelector('i');
+        icon.className = i < count
+          ? 'bi bi-star-fill fs-2 text-warning'
+          : 'bi bi-star fs-2 text-muted';
+      });
+    }
+
+    stars.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.dataset.val);
+        ratingInput.value = val;
+        ratingText.textContent = labels[val] + ' (' + val + '/5)';
+        ratingText.className = 'small fw-semibold';
+        paintStars(val);
+      });
+      btn.addEventListener('mouseenter', () => paintStars(parseInt(btn.dataset.val)));
+      btn.addEventListener('mouseleave', () => paintStars(parseInt(ratingInput.value) || 0));
+    });
+  </script>
+</body>
+</html>
